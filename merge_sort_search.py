@@ -76,11 +76,11 @@ def mergeSort(files):
 
 def main():
     files = ['dataset' + str(i+1) + '.csv' for i in range(12)]
-    sorted_table = mergeSort(files)
+    #sorted_table = mergeSort(files)
 
-    #dfs = [pd.read_csv(file) for file in files]
-    #df = pd.concat(dfs)
-    #sorted_table = df.sort_values(by='title', kind='mergesort')
+    dfs = [pd.read_csv(file) for file in files]
+    df = pd.concat(dfs)
+    sorted_table = df.sort_values(by='title', kind='mergesort')
 
     linear_search_time, linear_record = linearSearch(sorted_table)
     print(linear_search_time)
