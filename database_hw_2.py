@@ -97,11 +97,11 @@ def merge_sort(arr):
 		merge_ind = 0
 
 		while i < len(left_arr) and j < len(right_arr):
-			if left_arr[i][25] < right_arr[j][25]:
+			if left_arr[i][26] < right_arr[j][26]:
 				arr[merge_ind] = left_arr[i]
 				i += 1
 			else:
-				arr[merge_ind][25] = right_arr[j][25]
+				arr[merge_ind][26] = right_arr[j][26]
 				j += 1
 			merge_ind += 1
 		
@@ -122,7 +122,7 @@ def find():
 		with open(file_name, encoding="utf8") as csvDataFile:
 			csvReader = csv.reader(csvDataFile)
 			for row in csvReader:
-				if row[25] == "Sandman: Dream Hunters 30th Anniversary Edition":
+				if row[26] == "Sandman: Dream Hunters 30th Anniversary Edition":
 					return
 
 def main():
@@ -142,7 +142,7 @@ def main():
 			for row in csvReader: # each row is a list
 				results.append(row)
 
-				table.insert(row[25], row[25])
+				table.insert(row[26], row[26])
 			sorted = merge_sort(results)
 			pd.DataFrame(sorted).to_csv("temp/dataset_" + str(i) + "_row_100000_sorted.csv")
 
