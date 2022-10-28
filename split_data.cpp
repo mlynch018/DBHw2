@@ -1,10 +1,3 @@
-// Programmer: Bryan Besselman
-// Class: CS 5300 (Database Systems)
-// Section: 101
-// Date: 10/28/2022
-// Purpose: This .cpp file will split up dataset.csv into multiple files, where
-// each file will contain at least 100,000 lines of data.
-
 #include <iostream>
 #include <fstream>
 
